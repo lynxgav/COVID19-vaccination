@@ -5,7 +5,7 @@ doi: XXX
 
 ## Overview
 
-We used an age-structured model fitted to age-specific seroprevalence and hospital admission data from Portugal to investigate the impact of vaccination on controlling the COVID-19 pandemic in Portugal.
+We used an age-structured model fitted to age-specific seroprevalence and hospital admission data to investigate the impact of vaccination on controlling the COVID-19 pandemic in Portugal.
 
 All details are described in the preprint
 

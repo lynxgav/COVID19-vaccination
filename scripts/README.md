@@ -1,1 +1,1 @@
-This directory contains scripts
+This directory contains scripts and notebooks.

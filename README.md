@@ -84,7 +84,7 @@ Dependencies:
 - R Studio Version 1.3.1056 (Interface to R) https://rstudio.com/
 - rstan R package Version 2.21.1 (R interface to Stan) https://cran.r-project.org/web/packages/rstan/vignettes/rstan.html
 - cmdstanr R package Version 0.1.3 on Windows 10 Home Version 2004 https://mc-stan.org/cmdstanr/
-- Mathematica 12.1.0.0 https://www.wolfram.com/mathematica/
+- Mathematica 10.0.2.0 https://www.wolfram.com/mathematica/
 - [*Windows 10*] RTools40 https://cran.r-project.org/bin/windows/Rtools/
 - [*Windows 10*] Git Bash https://git-scm.com/downloads
 

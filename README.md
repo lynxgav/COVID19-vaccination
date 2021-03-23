@@ -23,7 +23,7 @@ The seroprevalence data has been published at:
 
 ### Contact matrices
 
-The unperturbed contact matrix and the school contact matrix are from the publication:
+The unperturbed contact matrix is from the publication:
 
 >Mistry, D., Litvinova, M., Pastore y Piontti, A. et al. Inferring high-resolution human mixing patterns for disease modeling. Nat Commun 12, 323 (2021). https://doi.org/10.1038/s41467-020-20544-y
 
@@ -37,7 +37,7 @@ We used publicly available [data](https://www.pordata.pt/Portugal/Popula%C3%A7%C
 
 ### Hospitalization data
 
-The hospitalization data was shared by a DGS collaborator and is not avaiable for public distribution. ***???***
+The hospitalization data are by the Central Administration of the Health System and the Shared Services of the Ministry of Health, covering all public hospitals in Portugal receiving COVID-19 patients.
 
 ## Model
 
@@ -47,7 +47,7 @@ Model inference was done with *R version 3.6.0* using *R Studio Version 1.3.1056
 
 The scripts can be found in the ``` scripts ``` directory. The R and Stan scripts are based on scripts used for the publication :
 
-> van Boven M, Teirlinck AC, Meijer A, Hooiveld M, van Dorp CH, Reeves RM, Campbell H, van der Hoek W; RESCEU Investigators. Estimating Transmission Parameters for Respiratory Syncytial Virus and Predicting the Impact of Maternal and Pediatric Vaccination. J Infect Dis. 2020 Oct 7;222(Supplement_7):S688-S694. doi: https://doi.org/10.1093/infdis/jiaa424 
+> Rozhnova G, van Dorp CH, Bruijning-Verhagen P, Bootsma MCJ, van de Wijgert JHHM, Bonten MJM, Kretzschmar ME. Model-based evaluation of school- and non-school-related measures to control the COVID-19 pandemic. Nature Communications. 2021;12(1):1614. https://doi.org/10.1038/s41467-021-21899-6
 
 ### Analysis
 
@@ -84,7 +84,7 @@ Dependencies:
 - R Studio Version 1.3.1056 (Interface to R) https://rstudio.com/
 - rstan R package Version 2.21.1 (R interface to Stan) https://cran.r-project.org/web/packages/rstan/vignettes/rstan.html
 - cmdstanr R package Version 0.1.3 on Windows 10 Home Version 2004 https://mc-stan.org/cmdstanr/
-- Mathematica 10.0.2.0 https://www.wolfram.com/mathematica/
+- Mathematica 12.1.0.0 https://www.wolfram.com/mathematica/
 - [*Windows 10*] RTools40 https://cran.r-project.org/bin/windows/Rtools/
 - [*Windows 10*] Git Bash https://git-scm.com/downloads
 
@@ -100,10 +100,9 @@ The necessary files are:
 
 - Age stratified hospitalization data
 - Age stratified demography
-- Age stratified seroprevalence in a given day
+- Age stratified seroprevalence 
 - Unperturbed (pre-lockdown) contact matrix
 - Lockdown contact matrix
-- Schools contact matrix
 
 ### R Studio
 

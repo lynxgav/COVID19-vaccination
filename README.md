@@ -23,11 +23,11 @@ The seroprevalence data has been published at:
 
 ### Contact matrices
 
-The unperturbed contact matrix is from the publication:
+The baseline (pre-pandemic) contact matrix is from the publication:
 
 >Mistry, D., Litvinova, M., Pastore y Piontti, A. et al. Inferring high-resolution human mixing patterns for disease modeling. Nat Commun 12, 323 (2021). https://doi.org/10.1038/s41467-020-20544-y
 
-The lockdown contact matrix was extrapolated from the publication:
+The contact matrix after the first lockdown in April 2020 was inferred using the Dutch matrix from the publication:
 
 > Jantien A. Backer, Liesbeth Mollema, R.A. Eric Vos, Don Klinkenberg, Fiona R.M. van der Klis, Hester E. de Melker, Susan van den Hof, Jacco Wallinga The impact of physical distancing measures against COVID-19 transmission on contacts and mixing patterns in the Netherlands: repeated cross-sectional surveys in 2016/2017, April 2020 and June 2020 medRxiv 2020.05.18.20101501; doi: https://doi.org/10.1101/2020.05.18.20101501
 
@@ -39,11 +39,15 @@ We used publicly available [data](https://www.pordata.pt/Portugal/Popula%C3%A7%C
 
 The hospitalization data are by the Central Administration of the Health System and the Shared Services of the Ministry of Health, covering all public hospitals in Portugal receiving COVID-19 patients.
 
+### Vaccination coverage data 
+
+The vaccination coverage data are by ECDC https://www.ecdc.europa.eu/en/publications-data/data-covid-19-vaccination-eu-eea
+
 ## Model
 
 ### Inference
 
-Model inference was done with *R version 3.6.0* using *R Studio Version 1.3.1056* (Interface to *R*) and Stan using *rstan* *R* package version 2.21.1 (*R* interface to *Stan*) and *cmdstanr* *R* package Version 0.1.3 on *Windows 10 Home Version 2004*.
+Parameter estimation was done with *R version 3.6.0* using *R Studio Version 1.3.1056* (Interface to *R*) and Stan using *rstan* *R* package version 2.21.1 (*R* interface to *Stan*) and *cmdstanr* *R* package Version 0.1.3 on *Windows 10 Home Version 2004*.
 
 The scripts can be found in the ``` scripts ``` directory. The R and Stan scripts are based on scripts used for the publication :
 
@@ -51,13 +55,13 @@ The scripts can be found in the ``` scripts ``` directory. The R and Stan script
 
 ### Analysis
 
-Analysis of the model was performed on a *Mac OS X El Capitan Version 10.11.5* and *Windows 10 Home Version 2004* using *Mathematica Version Number 12.1.0.0*. 
+Analysis of the model was performed on a *Mac OS X El Capitan Version 10.11.5* and *Windows 10 Home Version 2004* using *Mathematica Version Number 10.0.2.0*. 
 
-The notebook XXXXXXXXX.nb, where the analysis was performed, can be found in the ```notebooks``` directory.
+The notebooks *.nb, where the analyses for different scenarios were performed, can be found in the ```notebooks``` directory.
 
 ### Figures
 
-Figures for the manuscript were produced in the notebook XXXXXXXXX.nb. Figures can be found in the ```figures``` directory.
+Figures for the manuscript were produced in the notebooks *.nb. Figures can be found in the ```figures``` directory.
 
 ### Output
 
@@ -84,7 +88,7 @@ Dependencies:
 - R Studio Version 1.3.1056 (Interface to R) https://rstudio.com/
 - rstan R package Version 2.21.1 (R interface to Stan) https://cran.r-project.org/web/packages/rstan/vignettes/rstan.html
 - cmdstanr R package Version 0.1.3 on Windows 10 Home Version 2004 https://mc-stan.org/cmdstanr/
-- Mathematica 12.1.0.0 https://www.wolfram.com/mathematica/
+- Mathematica 10.0.2.0 https://www.wolfram.com/mathematica/
 - [*Windows 10*] RTools40 https://cran.r-project.org/bin/windows/Rtools/
 - [*Windows 10*] Git Bash https://git-scm.com/downloads
 
@@ -94,15 +98,15 @@ Some *R package* that also needed to be installed for the code to run are specif
 
 ## Instructions
 
-The plan is to use the *R* and its packages to fit the model to the data. Then export the parameters and use the *Mathematica* notebooks to perform the analysis, run scenarios and created the figures.
+You should proceed as follows: 1) use the *R* and its packages to fit the model to the data; 2) export the parameter estimates and use the *Mathematica* notebooks to perform the analyses, run scenarios and create the figures.
 
 The necessary files are:
 
 - Age stratified hospitalization data
 - Age stratified demography
 - Age stratified seroprevalence 
-- Unperturbed (pre-lockdown) contact matrix
-- Lockdown contact matrix
+- Baseline (pre-pandemic) contact matrix
+- Contact matrix after the lockdown
 
 ### R Studio
 
@@ -137,8 +141,8 @@ After this line of code there are plotting utilities in the *R* script that allo
 
 ### Mathematica
 
-To perform the analysis change the directories in the notebook ```XXXXXXX.nb``` such that *Mathematica* finds all necessary files and run the code sequentially from the start until the end.
+To perform the analyses change the directories in the notebook ```XXXXXXX.nb``` such that *Mathematica* finds all necessary files and run the code sequentially from the start until the end.
 
-Depending on the number of parameter samples, complexity of the scenarios, etc the time of computation for the ```XXXXXXX.nb``` notebook is not clearly determined.
+Depending on the number of parameter samples, complexity of the scenarios, etc the time of computation for the ```XXXXXXX.nb``` notebook is not clearly determined. Most computations run very fast, Re calculation can take up to few hours depending on the number samples used.
 
 ***Warning***  : The ```XXXXXXX.nb``` notebook is very RAM hungry and can cause *Mathematica* to crash. It is advised to store the results, clear the definitions and import the results to prevent this from happening. This is already implemented in the code.

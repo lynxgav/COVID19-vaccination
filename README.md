@@ -5,7 +5,7 @@ doi: XXX
 
 ## Overview
 
-We used an age-structured model fitted to age-specific seroprevalence and hospital admission data to investigate the impact of vaccination on controlling the COVID-19 pandemic in Portugal.
+We investigate relaxation scenarios using an age-structured transmission model that has been fitted to age-specific seroprevalence data, hospital admissions, and projected vaccination coverage for Portugal.
 
 All details are described in the preprint
 

@@ -67,7 +67,7 @@ Output files produced in *R* or *Mathematica* can be found in the ```output``` d
 
 ### OS requirements
 
-This package is supported for *macOS*, *Windows 10* and *Linux* (altought I didnt test it i think it is possible to run it) . The package has been tested on:
+This package is supported for *macOS*, *Windows 10* and *Linux*. The package has been tested on:
 
 - Windows 10 Home Version 2004
 - Mac OS X El Capitan Version 10.11.5
@@ -85,14 +85,31 @@ Dependencies:
 - rstan R package Version 2.21.1 (R interface to Stan) https://cran.r-project.org/web/packages/rstan/vignettes/rstan.html
 - cmdstanr R package Version 0.1.3 on Windows 10 Home Version 2004 https://mc-stan.org/cmdstanr/
 - Mathematica 12.1.0.0 https://www.wolfram.com/mathematica/
-- [*Windows 10*] RTools40
-- [*Windows 10*] Git Bash
+- [*Windows 10*] RTools40 https://cran.r-project.org/bin/windows/Rtools/
+- [*Windows 10*] Git Bash https://git-scm.com/downloads
 
 If you use *Windows* you probably need *RTools40* and/or *Git Bash* to be able to compile the model.
 
-After all the dependencies are installed it is necessary to change the directories in the *XXXXXXXX.R* file so that the *R Studio* finds all the necessary files. 
+Some *R package* that also needed to be installed for the code to run are specified in the beginning of the *XXXXXX.R* file.
 
-Once that is done you only need to sequentially run the code from the start.
+## Instructions
+
+The plan is to use the *R* and its packages to fit the model to the data. Then export the parameters and use the *Mathematica* notebooks to perform the analysis, run scenarios and created the figures.
+
+The necessary files are:
+
+- Age stratified hospitalization data
+- Age stratified demography
+- Age stratified seroprevalence in a given day
+- Unperturbed (pre-lockdown) contact matrix
+- Lockdown contact matrix
+- Schools contact matrix
+
+### R Studio
+
+After all the dependencies are installed in *R* it is necessary to change the directories in the ```XXXXXXXX.R``` file so that the *R Studio* finds all the necessary files. 
+
+Once that is done run the code sequentially from the start until the end.
 
 If *cmdstanr* was installed correctly the line below should create an executable in the working directory. The compilation should take a couple of minutes.
 
@@ -117,3 +134,12 @@ To export the parameters found in the fit into a *.csv* file run:
 ```
 write.csv(output, file = "output/my_parameters.csv", row.names = FALSE)
 ```
+After this line of code there are plotting utilities in the *R* script that allow for a quick analysis of the fitting. If desired, they can be skipped and the analysis can be done solely on *Mathematica*.
+
+### Mathematica
+
+To perform the analysis change the directories in the notebook ```XXXXXXX.nb``` such that *Mathematica* finds all necessary files and run the code sequentially from the start until the end.
+
+Depending on the number of parameter samples, complexity of the scenarios, etc the time of computation for the ```XXXXXXX.nb``` notebook is not clearly determined.
+
+***Warning***  : The ```XXXXXXX.nb``` notebook is very RAM hungry and can cause *Mathematica* to crash. It is advised to store the results, clear the definitions and import the results to prevent this from happening. This is already implemented in the code.

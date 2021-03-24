@@ -9,7 +9,7 @@ We investigate relaxation scenarios using an age-structured transmission model t
 
 All details are described in the preprint
 
-> João Viana, Christiaan van Dorp, Ana Nunes, Manuel C. Gomes, Michiel van Boven, Mirjam E. Kretzschmar, Marc Veldhoen, and Ganna Rozhnova (2021). Controlling the pandemic during the SARS-CoV-2 vaccination rollout: a modeling study, PREPRINT (Version 1) available at Research Square [https://doi.org/10.21203/rs.3.rs-358417/v1].
+> João Viana, Christiaan van Dorp, Ana Nunes, Manuel C. Gomes, Michiel van Boven, Mirjam E. Kretzschmar, Marc Veldhoen, and Ganna Rozhnova (2021). Controlling the pandemic during the SARS-CoV-2 vaccination rollout: a modeling study, PREPRINT (Version 1) available at Research Square https://doi.org/10.21203/rs.3.rs-358417/v1.
 
 ### Data 
 
@@ -55,7 +55,7 @@ Parameter estimation was done with *R version 3.6.0* using *R Studio Version 1.3
 
 The scripts can be found in the ``` scripts ``` directory. The R and Stan scripts are based on scripts used for the publication:
 
-> Rozhnova G, van Dorp CH, Bruijning-Verhagen P, Bootsma MCJ, van de Wijgert JHHM, Bonten MJM, Kretzschmar ME. Model-based evaluation of school- and non-school-related measures to control the COVID-19 pandemic. Nature Communications. 2021;12(1):1614. https://doi.org/10.1038/s41467-021-21899-6
+> Rozhnova G, van Dorp CH, Bruijning-Verhagen P, Bootsma MCJ, van de Wijgert JHHM, Bonten MJM, Kretzschmar ME. Model-based evaluation of school- and non-school-related measures to control the COVID-19 pandemic. Nature Communications. 2021;12(1):1614. https://doi.org/10.1038/s41467-021-21899-6.
 
 ### Analysis
 

@@ -29,7 +29,7 @@ The baseline (pre-pandemic) contact matrix is from the publication:
 
 The contact matrix after the first lockdown in April 2020 was inferred using the Dutch matrix from the publication:
 
-> Jantien A. Backer, Liesbeth Mollema, R.A. Eric Vos, Don Klinkenberg, Fiona R.M. van der Klis, Hester E. de Melker, Susan van den Hof, Jacco Wallinga The impact of physical distancing measures against COVID-19 transmission on contacts and mixing patterns in the Netherlands: repeated cross-sectional surveys in 2016/2017, April 2020 and June 2020 medRxiv 2020.05.18.20101501; doi: https://doi.org/10.1101/2020.05.18.20101501
+> Backer JA, Mollema L, Vos ER, Klinkenberg D, van der Klis FR, deMelker HE, et al. Impact of physical distancing measures against COVID-19 on contacts and mixing patterns: repeated cross-sectional surveys, the Netherlands, 201617, April 2020 and June 2020. Eurosurveillance. 2021;26(8). doi:https://doi.org/10.2807/1560-7917.ES.2021.26.8.2000994.
 
 ### Demographic data
 
@@ -41,7 +41,7 @@ The hospitalization data are by the Central Administration of the Health System 
 
 ### Vaccination coverage data 
 
-The vaccination coverage data for Portugal are by ECDC https://www.ecdc.europa.eu/en/publications-data/data-covid-19-vaccination-eu-eea
+The vaccination coverage data for Portugal are by ECDC https://www.ecdc.europa.eu/en/publications-data/data-covid-19-vaccination-eu-eea.
 
 Similar data can be downloaded from [Our World in Data](https://ourworldindata.org/covid-vaccinations) at https://github.com/owid/covid-19-data/tree/master/public/data/vaccinations.
 

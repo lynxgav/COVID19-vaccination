@@ -9,7 +9,7 @@ We investigate relaxation scenarios using an age-structured transmission model t
 
 All details are described in the preprint
 
-> João Viana, Christiaan H. van Dorp, Ana Nunes, Manuel C. Gomes, Michiel van Boven, Mirjam E. Kretzschmar, Marc Veldhoen, and Ganna Rozhnova. Controlling the pandemic during the SARS-CoV-2 vaccination rollout: a modeling study.
+> João Viana, Christiaan van Dorp, Ana Nunes, Manuel C. Gomes, Michiel van Boven, Mirjam E. Kretzschmar, Marc Veldhoen, and Ganna Rozhnova (2021). Controlling the pandemic during the SARS-CoV-2 vaccination rollout: a modeling study, PREPRINT (Version 1) available at Research Square [https://doi.org/10.21203/rs.3.rs-358417/v1].
 
 ### Data 
 

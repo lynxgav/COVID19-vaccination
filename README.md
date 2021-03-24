@@ -63,9 +63,9 @@ The notebooks *.nb, where the analyses for different scenarios were performed, c
 
 Figures for the manuscript were produced in the notebooks *.nb. Figures can be found in the ```figures``` directory.
 
-### Output
+### Outputs
 
-Output files produced in *R* or *Mathematica* can be found in the ```output``` directory.
+Output files produced in *R* or *Mathematica* can be found in the ```outputs``` directory.
 
 ## Other
 

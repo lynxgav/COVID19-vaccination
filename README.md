@@ -33,15 +33,19 @@ The contact matrix after the first lockdown in April 2020 was inferred using the
 
 ### Demographic data
 
-We used publicly available [data](https://www.pordata.pt/Portugal/Popula%C3%A7%C3%A3o+residente++m%C3%A9dia+anual+total+e+por+grupo+et%C3%A1rio-10) from the Contemporary Portugal Database (PORDATA) : https://www.pordata.pt/.
+We used publicly available [data](https://www.pordata.pt/Portugal/Popula%C3%A7%C3%A3o+residente++m%C3%A9dia+anual+total+e+por+grupo+et%C3%A1rio-10) from the Contemporary Portugal Database (PORDATA): https://www.pordata.pt/.
 
 ### Hospitalization data
 
-The hospitalization data are by the Central Administration of the Health System and the Shared Services of the Ministry of Health, covering all public hospitals in Portugal receiving COVID-19 patients.
+The hospitalization data are by the Central Administration of the Health System and the Shared Services of the Ministry of Health, covering all public hospitals in Portugal receiving COVID-19 patients. This set is in the data folder.
 
 ### Vaccination coverage data 
 
-The vaccination coverage data are by ECDC https://www.ecdc.europa.eu/en/publications-data/data-covid-19-vaccination-eu-eea
+The vaccination coverage data for Portugal are by ECDC https://www.ecdc.europa.eu/en/publications-data/data-covid-19-vaccination-eu-eea
+
+Similar data can be downloaded from [Our World in Data](https://ourworldindata.org/covid-vaccinations) at https://github.com/owid/covid-19-data/tree/master/public/data/vaccinations.
+
+The same data can be downloaded from https://github.com/dssg-pt/covid19pt-data.
 
 ## Model
 
@@ -49,7 +53,7 @@ The vaccination coverage data are by ECDC https://www.ecdc.europa.eu/en/publicat
 
 Parameter estimation was done with *R version 3.6.0* using *R Studio Version 1.3.1056* (Interface to *R*) and Stan using *rstan* *R* package version 2.21.1 (*R* interface to *Stan*) and *cmdstanr* *R* package Version 0.1.3 on *Windows 10 Home Version 2004*.
 
-The scripts can be found in the ``` scripts ``` directory. The R and Stan scripts are based on scripts used for the publication :
+The scripts can be found in the ``` scripts ``` directory. The R and Stan scripts are based on scripts used for the publication:
 
 > Rozhnova G, van Dorp CH, Bruijning-Verhagen P, Bootsma MCJ, van de Wijgert JHHM, Bonten MJM, Kretzschmar ME. Model-based evaluation of school- and non-school-related measures to control the COVID-19 pandemic. Nature Communications. 2021;12(1):1614. https://doi.org/10.1038/s41467-021-21899-6
 
@@ -89,10 +93,11 @@ Dependencies:
 - rstan R package Version 2.21.1 (R interface to Stan) https://cran.r-project.org/web/packages/rstan/vignettes/rstan.html
 - cmdstanr R package Version 0.1.3 on Windows 10 Home Version 2004 https://mc-stan.org/cmdstanr/
 - Mathematica 10.0.2.0 https://www.wolfram.com/mathematica/
-- [*Windows 10*] RTools40 https://cran.r-project.org/bin/windows/Rtools/
-- [*Windows 10*] Git Bash https://git-scm.com/downloads
 
 If you use *Windows* you probably need *RTools40* and/or *Git Bash* to be able to compile the model.
+
+- [*Windows 10*] RTools40 https://cran.r-project.org/bin/windows/Rtools/
+- [*Windows 10*] Git Bash https://git-scm.com/downloads
 
 Some *R package* that also needed to be installed for the code to run are specified in the beginning of the *XXXXXX.R* file.
 
@@ -102,11 +107,14 @@ You should proceed as follows: 1) use the *R* and its packages to fit the model 
 
 The necessary files are:
 
-- Age stratified hospitalization data
 - Age stratified demography
-- Age stratified seroprevalence 
+- Age distribution of morbidities
 - Baseline (pre-pandemic) contact matrix
-- Contact matrix after the lockdown
+- Contact matrix after the first lockdown
+- Age stratified hospitalization data
+- Age stratified seroprevalence 
+- Vaccination rollout data
+- Vaccination plan
 
 ### R Studio
 
@@ -118,7 +126,7 @@ If *cmdstanr* was installed correctly the line below should create an executable
 
 ``` sm <- cmdstan_model(stan_model_file) ```
 
-The following line is where the fitting is done. Depending on the precision, number of iterations, etc, it can take from minutes to weeks to complete the fitting.
+The following line is where the fitting is done. Depending on the precision, number of iterations, etc, it can take from minutes to days to complete the fitting.
 
 ```
 fit <- sm$sample(
@@ -129,20 +137,20 @@ fit <- sm$sample(
 To save the fit done run:
 
 ```
-save(fit.rstan, file = "output/my_fit.rda")
+save(fit.rstan, file = "outputs/my_fit.rda")
 ```
 
 To export the parameters found in the fit into a *.csv* file run:
 
 ```
-write.csv(output, file = "output/my_parameters.csv", row.names = FALSE)
+write.csv(output, file = "outputs/my_parameters.csv", row.names = FALSE)
 ```
-After this line of code there are plotting utilities in the *R* script that allow for a quick analysis of the fitting. If desired, they can be skipped and the analysis can be done solely on *Mathematica*.
+After this line of code there are plotting utilities in the *R* script that allow for a quick analysis of the fitting. If desired, they can be skipped and the analysis can be done solely in *Mathematica*.
 
 ### Mathematica
 
 To perform the analyses change the directories in the notebook ```XXXXXXX.nb``` such that *Mathematica* finds all necessary files and run the code sequentially from the start until the end.
 
-Depending on the number of parameter samples, complexity of the scenarios, etc the time of computation for the ```XXXXXXX.nb``` notebook is not clearly determined. Most computations run very fast, Re calculation can take up to few hours depending on the number samples used.
+Depending on the number of parameter samples, complexity of the scenarios, etc. the time of computation for the ```XXXXXXX.nb``` notebook is not clearly determined. Most computations run within a matter of seconds but Re calculation can take up to few hours depending on the number samples used.
 
-***Warning***  : The ```XXXXXXX.nb``` notebook is very RAM hungry and can cause *Mathematica* to crash. It is advised to store the results, clear the definitions and import the results to prevent this from happening. This is already implemented in the code.
+***Warning***  : The ```XXXXXXX.nb``` notebook is very RAM hungry on Windows and can cause *Mathematica* to crash. It is advised to store the results, clear the definitions and import the results to prevent this from happening. This is already implemented in the code.

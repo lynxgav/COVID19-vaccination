@@ -1,1 +1,1 @@
-This directory contains scripts and notebooks.
+This directory contains R/Stan scripts that produce parameter estimates.

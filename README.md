@@ -149,8 +149,8 @@ After this line of code there are plotting utilities in the *R* script that allo
 
 ### Mathematica
 
-To perform the analyses change the directories in the notebook ```XXXXXXX.nb``` such that *Mathematica* finds all necessary files and run the code sequentially from the start until the end.
+To perform the analyses change the directories in the notebooks ```*.nb``` such that *Mathematica* finds all necessary files and run the code sequentially from the start until the end.
 
-Depending on the number of parameter samples, complexity of the scenarios, etc. the time of computation for the ```XXXXXXX.nb``` notebook is not clearly determined. Most computations run within a matter of seconds but Re calculation can take up to few hours depending on the number samples used.
+Depending on the number of parameter samples, complexity of the scenarios, etc. the time of computation for the notebooks ```*.nb``` is not clearly determined. Most computations run within a matter of seconds but Re calculation can take up to few hours depending on the number samples and operating system used.
 
-***Warning***  : The ```XXXXXXX.nb``` notebook is very RAM hungry on Windows and can cause *Mathematica* to crash. It is advised to store the results, clear the definitions and import the results to prevent this from happening. This is already implemented in the code.
+***Warning***  : The ```*.nb``` notebook is very RAM hungry on Windows and can cause *Mathematica* to crash. It is advised to store the results, clear the definitions and import the results to prevent this from happening. This is already implemented in the code.

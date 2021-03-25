@@ -1,7 +1,7 @@
 # COVID19-vaccination
 
 ## DOI for this GitHub repository
-doi: XXX
+doi: http://doi.org/10.5281/zenodo.4636679
 
 ## Overview
 

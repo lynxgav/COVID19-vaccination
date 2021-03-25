@@ -5,7 +5,7 @@ doi: XXX
 
 ## Overview
 
-We investigate relaxation scenarios using an age-structured transmission model that has been fitted to age-specific seroprevalence data, hospital admissions, and projected vaccination coverage for Portugal.
+We investigate relaxation scenarios during the SARS-CoV-2 vaccination rollout using an age-structured transmission model that has been fitted to age-specific seroprevalence data, hospital admissions, and projected vaccination coverage for Portugal.
 
 All details are described in the preprint
 

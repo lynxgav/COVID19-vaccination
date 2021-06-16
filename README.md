@@ -7,9 +7,9 @@ doi: http://doi.org/10.5281/zenodo.4636679
 
 We investigate relaxation scenarios during the SARS-CoV-2 vaccination rollout using an age-structured transmission model that has been fitted to age-specific seroprevalence data, hospital admissions, and projected vaccination coverage for Portugal.
 
-All details are described in the article published in Nature Communications https://doi.org/10.1038/s41467-021-23938-8
+All details are described in the article published in Nature Communications https://rdcu.be/cmDC4
 
-> João Viana, Christiaan van Dorp, Ana Nunes, Manuel C. Gomes, Michiel van Boven, Mirjam E. Kretzschmar, Marc Veldhoen, and Ganna Rozhnova (2021). Controlling the pandemic during the SARS-CoV-2 vaccination rollout: a modeling study, PREPRINT (Version 1) available at Research Square https://doi.org/10.21203/rs.3.rs-358417/v1.
+> João Viana, Christiaan H. van Dorp, Ana Nunes, Manuel C. Gomes, Michiel van Boven, Mirjam E. Kretzschmar, Marc Veldhoen, and Ganna Rozhnova (2021). Controlling the pandemic during the SARS-CoV-2 vaccination rollout. Nature Communications 12, 3674 (2021). https://doi.org/10.1038/s41467-021-23938-8.
 
 ### Data 
 
